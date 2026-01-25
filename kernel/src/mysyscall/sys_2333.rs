@@ -2,6 +2,7 @@ use system_error::SystemError;
 
 use crate::arch::interrupt::TrapFrame;
 use crate::syscall::table::Syscall;
+use crate::syscall::table::FormattedSyscallParam;
 use alloc::string::ToString;
 use alloc::vec::Vec;
 
@@ -16,7 +17,7 @@ impl Syscall for Sys2333Handle {
     }
 
     fn handle(&self, args: &[usize], frame: &mut TrapFrame) -> Result<usize, SystemError> {
-        log::info("syscall 2333 called");
+        log::info!("syscall 2333 called");
         return Ok(6666);
     }
 
