@@ -71,6 +71,7 @@ mod smp;
 mod syscall;
 mod time;
 mod tracepoint;
+mod mysyscall;
 #[cfg(target_arch = "x86_64")]
 mod virt;
 
