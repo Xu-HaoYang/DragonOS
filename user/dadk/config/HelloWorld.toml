@@ -1,0 +1,20 @@
+name = "HelloWorld"
+version = "11.45.14"
+description = "DragonOS, Hello World!"
+build-once = false
+install-once = false
+target-arch = ["x86_64"]
+
+[task-source]
+type = "build-from-source"
+source = "local"
+source-path = "user/apps/HelloWorld"
+
+[build]
+build-command = "make install"
+
+[install]
+in-dragonos-path = "/bin"
+
+[clean]
+clean-command = "make clean"
